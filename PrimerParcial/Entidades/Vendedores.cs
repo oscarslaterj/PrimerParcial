@@ -13,14 +13,17 @@ namespace PrimerParcial.Entidades
 
         public int VendedorId { get; set; }
         public String Nombres { get; set; }
-        public double Sueldo { get; set; }
+        public decimal Sueldo { get; set; }
+        public decimal PorcRetencion { get; set; }
         public decimal Retencion { get; set; }
+
 
         public Vendedores()
         {
             VendedorId = 0;
             Nombres = string.Empty;
             Sueldo = 0;
+            PorcRetencion = 0;
             Retencion = 0;
         }
     }

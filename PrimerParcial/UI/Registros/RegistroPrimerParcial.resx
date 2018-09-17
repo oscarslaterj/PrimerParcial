@@ -10323,4 +10323,7 @@
         oV+7l4gNDDdz0q8D6g9Vte7on3LbXgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="errorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
