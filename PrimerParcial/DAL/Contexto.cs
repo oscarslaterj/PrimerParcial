@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PrimerParcial.Entidades;
 
-namespace RegistroArticulos.DAL
+namespace PrimerParcial.DAL
 {
     public class Contexto : DbContext
     {

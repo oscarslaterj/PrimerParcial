@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\VendedoresBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\Vendedores.cs" />
     <Compile Include="MainForm.cs">
@@ -99,10 +100,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
     <Folder Include="UI\Consultas\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DAL\Scripts\SQLQuery.sql" />
     <Content Include="Resources\add-file.png" />
     <Content Include="Resources\archivo.png" />
     <Content Include="Resources\buscando-usuario.png" />
