@@ -107,6 +107,5 @@ namespace PrimerParcial.BLL
             return people;
         }
 
-
     }
 }

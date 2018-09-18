@@ -166,6 +166,7 @@
             this.RetencionnumericUpDown.ReadOnly = true;
             this.RetencionnumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.RetencionnumericUpDown.TabIndex = 10;
+            this.RetencionnumericUpDown.ValueChanged += new System.EventHandler(this.RetencionnumericUpDown_ValueChanged);
             // 
             // label4
             // 

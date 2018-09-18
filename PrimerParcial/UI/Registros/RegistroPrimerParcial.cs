@@ -141,7 +141,7 @@ namespace PrimerParcial.UI.Registros
                     MessageBox.Show("No se puede modificar un vendedor que no existe", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                paso = VendedoresBLL.Modificar(vendedor);
+                paso = BLL.VendedoresBLL.Modificar(vendedor);
             }
           
             if (paso)
@@ -162,11 +162,17 @@ namespace PrimerParcial.UI.Registros
 
             int id = Convert.ToInt32(IDnumericUpDown.Value);
 
-            if (VendedoresBLL.Eliminar(id))
+            if (BLL.VendedoresBLL.Eliminar(id))
                 MessageBox.Show("Eliminado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
                 MessageBox.Show("No se pudo eliminar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             Limpiar();
+        }
+
+        private void RetencionnumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (PorcRetencionnumericUpDown.Value != 0)
+                PorcRetencionnumericUpDown.Value = PorcRetencionnumericUpDown.Value / 100;
         }
     }
 }
