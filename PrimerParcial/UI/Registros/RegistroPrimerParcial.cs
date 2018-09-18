@@ -57,24 +57,34 @@ namespace PrimerParcial.UI.Registros
         }
 
 
-        private bool Validar()
+        private bool Validar(int validar)
         {
-            var controles = this.Controls.OfType<TextBox>();
-
-            foreach (var item in controles)
+            bool paso = false;
+            if (validar == 1 && IDnumericUpDown.Value == 0)
             {
-               if (String.IsNullOrWhiteSpace(item.Text))
-                   errorProvider.SetError(item, "campo obligatorio");
+                errorProvider.SetError(IDnumericUpDown, "Ingrese un ID");
+                paso = true;
             }
-
-            bool paso = true;
-
-            if (NombrestextBox.Text == string.Empty)
+            if (validar == 2 && NombrestextBox.Text == String.Empty)
             {
-                errorProvider.SetError(NombrestextBox, "No puede dejar este campo vacio");
-                paso = false;
+                errorProvider.SetError(NombrestextBox, "digite los nombres");
+                paso = true;
             }
-
+            if (validar == 2 && SueldonumericUpDown.Value == 0)
+            {
+                errorProvider.SetError(SueldonumericUpDown, "Ingrese Sueldo");
+                paso = true;
+            }
+            if (validar == 2 && PorcRetencionnumericUpDown.Value == 0)
+            {
+                errorProvider.SetError(PorcRetencionnumericUpDown, "Ingrese el Porciento de retencion");
+                paso = true;
+            }
+            if (validar == 2 && RetencionnumericUpDown.Value == 0)
+            {
+                errorProvider.SetError(RetencionnumericUpDown, "Ingrese retencion");
+                paso = true;
+            }
             return paso;
         }
 
@@ -113,8 +123,11 @@ namespace PrimerParcial.UI.Registros
             Vendedores vendedor;
             bool paso = false;
 
-            if (!Validar())
+            if (Validar(2))
+            {
+                MessageBox.Show("LLenar los campos marcados");
                 return;
+            }
 
             vendedor = LlenaClase();
             Limpiar();
@@ -140,13 +153,20 @@ namespace PrimerParcial.UI.Registros
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             errorProvider.Clear();
-            int id;
-            int.TryParse(IDnumericUpDown.Text, out id);
-            Limpiar();
+
+            if (Validar(1))
+            {
+                MessageBox.Show("Ingresar un ID");
+                return;
+            }
+
+            int id = Convert.ToInt32(IDnumericUpDown.Value);
+
             if (VendedoresBLL.Eliminar(id))
-                MessageBox.Show("Eliminado");
+                MessageBox.Show("Eliminado!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                errorProvider.SetError(IDnumericUpDown, "No se puede eliminar un vendedor que no existe");
+                MessageBox.Show("No se pudo eliminar!!", "Fallo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Limpiar();
         }
     }
 }
