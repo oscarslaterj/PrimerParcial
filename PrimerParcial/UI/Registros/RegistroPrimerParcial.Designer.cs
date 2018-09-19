@@ -1,4 +1,4 @@
-﻿namespace PrimerParcial.UI.Registros
+namespace PrimerParcial.UI.Registros
 {
     partial class RegistroPrimerParcial
     {
@@ -45,6 +45,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.PorcRetencionnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.FechadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.IDnumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SueldonumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RetencionnumericUpDown)).BeginInit();
@@ -70,7 +72,7 @@
             // 
             this.Nuevobutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
-            this.Nuevobutton.Location = new System.Drawing.Point(21, 228);
+            this.Nuevobutton.Location = new System.Drawing.Point(18, 248);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(103, 50);
             this.Nuevobutton.TabIndex = 1;
@@ -83,7 +85,7 @@
             // 
             this.Guardarbutton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
-            this.Guardarbutton.Location = new System.Drawing.Point(148, 228);
+            this.Guardarbutton.Location = new System.Drawing.Point(146, 248);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(103, 50);
             this.Guardarbutton.TabIndex = 2;
@@ -96,7 +98,7 @@
             // 
             this.Eliminarbutton.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
-            this.Eliminarbutton.Location = new System.Drawing.Point(275, 228);
+            this.Eliminarbutton.Location = new System.Drawing.Point(277, 248);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(103, 50);
             this.Eliminarbutton.TabIndex = 3;
@@ -197,12 +199,32 @@
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // FechadateTimePicker
+            // 
+            this.FechadateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.FechadateTimePicker.Location = new System.Drawing.Point(80, 210);
+            this.FechadateTimePicker.Name = "FechadateTimePicker";
+            this.FechadateTimePicker.Size = new System.Drawing.Size(120, 20);
+            this.FechadateTimePicker.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 210);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Fecha";
+            // 
             // RegistroPrimerParcial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(405, 292);
+            this.ClientSize = new System.Drawing.Size(405, 310);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.PorcRetencionnumericUpDown);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -247,5 +269,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown PorcRetencionnumericUpDown;
         private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker FechadateTimePicker;
     }
 }
