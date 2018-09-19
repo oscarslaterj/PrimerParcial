@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PrimerParcial.UI;
+using PrimerParcial.UI.Registros;
 
 namespace PrimerParcial
 {
@@ -15,6 +17,18 @@ namespace PrimerParcial
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void registroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegistroPrimerParcial registro = new RegistroPrimerParcial();
+            registro.Show();
+        }
+        
+         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaPrimerParcial consulta = new ConsultaPrimerParcial();
+            consulta.Show();
         }
     }
 }

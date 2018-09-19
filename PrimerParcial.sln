@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimerParcial", "PrimerParcial\PrimerParcial.csproj", "{851808FA-3147-4D78-8699-CC27472043C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimerParcialTests", "PrimerParcialTests\PrimerParcialTests.csproj", "{0FD61B2C-299F-4E18-9BEA-78D7079607D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{851808FA-3147-4D78-8699-CC27472043C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{851808FA-3147-4D78-8699-CC27472043C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{851808FA-3147-4D78-8699-CC27472043C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FD61B2C-299F-4E18-9BEA-78D7079607D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FD61B2C-299F-4E18-9BEA-78D7079607D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FD61B2C-299F-4E18-9BEA-78D7079607D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FD61B2C-299F-4E18-9BEA-78D7079607D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
