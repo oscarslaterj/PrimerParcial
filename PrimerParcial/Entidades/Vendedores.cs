@@ -16,6 +16,7 @@ namespace PrimerParcial.Entidades
         public decimal Sueldo { get; set; }
         public decimal PorcRetencion { get; set; }
         public decimal Retencion { get; set; }
+        public DateTime Fecha { get; set; }
 
 
         public Vendedores()
@@ -25,6 +26,7 @@ namespace PrimerParcial.Entidades
             Sueldo = 0;
             PorcRetencion = 0;
             Retencion = 0;
+            Fecha = DateTime.Now;
         }
     }
 }
