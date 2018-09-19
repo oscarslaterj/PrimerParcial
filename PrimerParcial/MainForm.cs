@@ -24,5 +24,11 @@ namespace PrimerParcial
             RegistroPrimerParcial registro = new RegistroPrimerParcial();
             registro.Show();
         }
+        
+         private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultaPrimerParcial consulta = new ConsultaPrimerParcial();
+            consulta.Show();
+        }
     }
 }
