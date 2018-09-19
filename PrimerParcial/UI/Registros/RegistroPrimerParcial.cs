@@ -1,4 +1,4 @@
-﻿using PrimerParcial.BLL;
+using PrimerParcial.BLL;
 using PrimerParcial.Entidades;
 using System;
 using System.Collections.Generic;
@@ -26,6 +26,7 @@ namespace PrimerParcial.UI.Registros
             SueldonumericUpDown.Value = 0;
             PorcRetencionnumericUpDown.Value = 0;
             RetencionnumericUpDown.Value = 0;
+            FechadateTimePicker.Value = DateTime.Now;
         }
 
         private Vendedores LlenaClase()
@@ -36,6 +37,7 @@ namespace PrimerParcial.UI.Registros
             vendedor.Sueldo = Convert.ToInt32(SueldonumericUpDown.Value);
             vendedor.PorcRetencion = Convert.ToInt32(PorcRetencionnumericUpDown.Value);
             vendedor.Retencion = Convert.ToInt32(RetencionnumericUpDown.Value);
+            vendedor.Fecha = FechadateTimePicker.Value;
             return vendedor;
         }
 
@@ -46,6 +48,7 @@ namespace PrimerParcial.UI.Registros
             SueldonumericUpDown.Value = vendedor.Sueldo;
             PorcRetencionnumericUpDown.Value = vendedor.PorcRetencion;
             RetencionnumericUpDown.Value = vendedor.Retencion;
+            FechadateTimePicker.Value = vendedor.Fecha;
 
         }
 
